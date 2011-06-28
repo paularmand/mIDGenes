@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>ISE / Idea Space Evaluation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Description" content="ISE Idea Space Evaluation, variety, novelty, idea effectiveness, idea space" />
+<meta name="Keywords" content="ISE Idea Space Evaluation, variety, novelty, idea effectiveness, idea space" />
+<link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/main.css" title="default" media="screen, projection" />
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/IE.css" media="screen, projection" /><![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+        <h2 class="access">Taakbalk</h2>
+        <ul id="access">
+            <li><a href="#mainnav" tabindex="1" accesskey="N">navigatie</a></li>
+            <li><a href="#content" tabindex="2" accesskey="C">inhoud</a></li>
+        </ul>
+        <ul id="taskbar">
+            <li class="home"><a href="http://www.kuleuven.be/english/" tabindex="4" id="top" name="top">home</a></li>
+            <li class="whoiswho"><a href="http://cwisdb.kuleuven.be/persdb-bin/persdb?lang=E&amp;oproep=vraag">Who is who</a></li>
+            <li class="organigram"><a href="http://organigram.kuleuven.be/0/50000050e.htm">organisational chart</a></li>
+            <li class="contact"><a href="http://www.kuleuven.be/english/contact.html">contact</a></li>
+            <li class="intranet"><a href="https://www.kuleuven.be/intranet/english/">intranet</a></li>
+        </ul>
+        <a href="http://www.kuleuven.be/english/">
+        <img id="logo" src="https://stijl.kuleuven.be/_i/logo-kuleuven.gif" width="161" height="54" alt="logo" title="Katholieke Universiteit Leuven - Home" /></a>
+        <form action="http://search.kuleuven.be/index.cgi" method="post" id="searchform" title="zoekformulier" name="searchform"><label for="words">zoekterm: </label>
+            <input tabindex="5" type="text" name="words" id="words" title="enter a keyword for searching"/><input tabindex="6" type="image" class="magnifier" src="https://stijl.kuleuven.be/_i/icons/icon_magnifier.gif" alt="verstuur" title="zoek nu"/><input type="hidden" name="oproep" value="zoek" />
+        </form>
+    </div><!-- end header -->
+    <div id="mainnav">
+        <h2 class="access">Navigatie</h2>
+        <ul>
+            <li><a href="http://www.kuleuven.be/about/">About K.U.Leuven</a></li>
+            <li><a href="http://www.kuleuven.be/education/">Education</a></li>
+            <li><a href="http://www.kuleuven.be/research/">Research</a></li>
+            <li><a href="http://www.kuleuven.be/admissions/">Admissions</a></li>
+            <li><a href="http://www.kuleuven.be/english/living.html">Living in Leuven</a></li>
+            <li><a href="http://alum.kuleuven.be/english/">Alumni</a></li>
+            <li><a href="http://bib.kuleuven.be/english/index.php">Libraries</a></li>
+            <li><a href="http://www.kuleuven.be/english/faculties_schools.html">Faculties, Departments &amp; Schools</a></li>
+            <li><a href="http://www.kuleuven.be/international/index.html">International cooperation</a></li>
+        </ul>
+    </div>
+    <div id="content_background" style="background-image: url(../images/fist_small.gif); background-repeat: no-repeat; background-position:right top;" >
+        <div id="contentwrapper">
+            <br />
+            <center><a href="./../">Home</a> | Documentation</center>
+            <div id="content">
+            <!--    <h1 >FIST / Framework to develop Idea Space evaluation metrics and Tools</h1>-->
+    <div id="top-container">
+        <h1><a href="./../">FIST / Framework to develop Idea Space evaluation metrics and Tools</a></h1>
+        This software was developed by the <a href="http://www.mech.kuleuven.be/en/cib/imresearch/cibdesign">Design Methodologies and Life Cycle Engineering</a>
+        group of the <a href="http://www.mech.kuleuven.be/en/cib/">CIB - Centre for Industrial Management / Traffic and Infrastructure</a>
+        at the Katholieke University Leuven in Belgium.
+        <br />It's primary focus is supporting the development of metrics to evaluate an idea space, in turn this can be used to evaluate idea generation methods (like brainstorming, ...).
+      
+    </div>
+
+                        <h2>Documentation on tree format</h2>
+
+                <h5>Format</h5>
+                    The base format builds upon the JSON tree format used in the <a href="http://thejit.org">JavaScript InfoVis Toolkit</a>.
+                    Instead of formalizing its the structure, you can study the example below.
+                    You can also peek into the other online examples trees by first loading the tree in the software and saving the it to your local drive.
+                    The coloring of a node (currently) reflects the amount of children a node has.
+                    <br /><br />
+
+                <b>Example JSON source and corresponding visual representation</b>
+                    <table><td width="55%"><pre>{
+                      "id": "0",
+                      "name": "Transport",
+                      "data": {},
+                      "children": [{
+                        "id": "ph 1",
+                        "name": "Combustion",
+                        "data": {},
+                        "children": [{
+                          "id": "wo 1.1",
+                          "name": "Comb.Engine",
+                          "data": {},
+                          "children": [{
+                              "id": "em 1.1.1",
+                              "name": "Rotational",
+                              "data": {"Participant": [1,4], "feasibility_rating": 2},
+                              "children": []
+                              }, {
+                              "id": "em 1.1.2",
+                              "name": "Standard",
+                              "data": {"Participant": [1,3], "feasibility_rating": 3},
+                              "children": []
+                          }]
+                        }]
+                      }, {
+                          "id": "ph 2",
+                          "name": "Electrical",
+                          "data": {},
+                          "children": [{
+                            "id": "wo 2.1",
+                            "name": "Elec. engine",
+                            "data": {"Participant": [2,3], "feasibility_rating": 5},
+                            "children": [{
+                                "id": "em 2.1.1",
+                                "name": "Bat.Power",
+                                "data": {"Participant": [2,3], "feasibility_rating": 5},
+                                "children": []
+                                },{
+                                "id": "em 2.1.2",
+                                "name": "SolarPower",
+                                "data": {"Participant": [2,3], "feasibility_rating": 5},
+                                "children": []
+                                }]
+                            }, {
+                            "id": "wo 2.1.2",
+                            "name": "Electrostatic",
+                            "data": {"Participant": [2,3], "feasibility_rating": 5},
+                            "children": []
+                          }]
+                      }]
+                    }</pre></td><td>Visual representation of the example JSON Tree <img src="./tree_example_2.jpg" /></td>
+                    </table>
+
+            <h2>Documentation on idea space metrics</h2>
+            <h3>Variety</h3>
+                Can be understood as a measure indicating how "broad" your idea space has been searched.
+                A low variety is interpreted as a narrow range of generated ideas, while a high flexibility
+                is indicative of a broadly searched idea space.
+
+                Shah et al. (2000) propose the variety as a more formal measure of the explored concept space
+                during idea generation. In later research, Nelson et al. (2009) and Srinivasan & Chakrabarti
+                (2010) propose refinements to the variety metric.
+
+
+                <h5>References</h5>
+                Shah, J. J., Kulkarni, S. V., & Vargas-Hernandez, N. (2000). Evaluation of
+                idea generation methods for conceptual design: Effectiveness metrics and
+                design of experiments. Journal of Mechanical Design, 122 , 377-384.<br/>
+                Nelson, B. A., Wilson, J. O., Rosen, D., & Yen, J. (2009). Refined metrics
+                for measuring ideation effectiveness. Design Studies, 30 , 737-743.<br />
+                Srinivasan, V., & Chakrabarti, A. (2010). Investigating Novelty-Outcome
+                relationships in engineering design. Artificial Intelligence for Engineering
+                Design, Analysis and Manufacturing, 24 , 161-178.
+
+
+            <h3>Novelty</h3>
+                Novelty can be subdivided in originality and paradigm relatedness (Dean et al., 2006).
+                Originality expresses how rare an idea is (rarity), but also how ingenious,
+                imaginative, or surprising the idea is. Paradigm relatedness expresses the degree
+                to which an idea is radical or transformational.
+
+                Since rarity can be quantified, other research has used this measure separately
+                (Connolly et al., 1990), as substitute for originality (Jansson & Smith, 1991), or as
+                substitute for the novelty metric as a whole (Shah et al., 2000; Linsey, 2007).
+
+                Peeters et al. (2010) propose to calculate the novelty for each abstraction
+                level leading to a more fine-grained analysis of the effectiveness of the applied
+                idea generation method.
+
+                <h5>References</h5>
+                    Dean, D. L., Hender, J. M., Rodgers, T. L., & Santanen, E. L. (2006).
+                    Identifying quality, novel, and creative ideas: Constructs and scales for
+                    idea evaluation. Journal of the Association for Information Systems, 7 ,
+                    646-698. <br />
+                    Connolly, T., Jessup, L. M., & Valacich, J. S. (1990). Effects of anonymity
+                    and evaluative tone on idea generation in computer-mediated groups. Management
+                    Science, 36 , 689-703.<br />
+                    Jansson, D. G., & Smith, S. M. (1991). Design fixation. Design Studies, 12 , 3-11.<br />
+                    Shah, J. J., Kulkarni, S. V., & Vargas-Hernandez, N. (2000). Evaluation of
+                    idea generation methods for conceptual design: Effectiveness metrics and
+                    design of experiments. Journal of Mechanical Design, 122 , 377-384.<br/>
+                    Linsey, J. S. (2007). Design-by-Analogy and Representation in Innovative
+                    Engineering Concept Generation. Ph.D. thesis The University of Texas
+                    Austin, Texas.<br />
+                    Peeters, J., Verhaegen, P., Vandevenne, D., & Duflou, J. (2010). Refined
+                    metrics for measuring novelty in ideation. Bordeaux.<br />
+
+                &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
+            </div>
+        </div><!--end contentwrapper-->
+        <div id="footer">
+          <h1>FIST / Framework to develop Idea Space evaluation metrics and Tools</h1>
+      Quantitative Evaluation of Idea Spaces / Copyright (c) 2011, Paul-Armand Verhaegen / All rights reserved /
+      Based on the <a href="http://thejit.org">JavaScript InfoVis Toolkit</a><br />
+      Like most sites, this one also works with IE (slow), but it works a lot better in Chrome (or Chromium) or Firefox (consider using these).<p class="container"><img src="https://stijl.kuleuven.be/_i/sedes.gif" alt="K.U.Leuven" width="42" id="sedes" /></p>
+      <hr />
+          <p>Copyright &copy; Paul-Armand Verhaegen</p>
+          <p>Comments on this page: <a href="mailto:paularmand.verhaegen@cib.kuleuven.be">Paul-Armand Verhaegen</a>
+            | <a href="http://www.kuleuven.be/kuleuven/disclaimer.html">Disclaimer</a></p>
+        </div>
+    </div>
+</div> <!--end wrapper-->
+</body>
+</html>

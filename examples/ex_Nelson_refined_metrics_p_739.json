@@ -1,0 +1,72 @@
+{	
+    "id": "root",
+    "name": "root",
+    "data": {},
+    "children": [
+        {
+            "id": "ph 1",
+            "name": "ph 1",
+            "data": {},
+            "children": [
+                {
+                    "id": "wo 1.1",
+                    "name": "wo 1.1",
+                    "data": {},
+                    "children": [
+                        {
+                            "id": "em 1.1.1",
+                            "name": "em 1.1.1",
+                            "data": {},
+                            "children": [
+                                {
+                                    "id": "de 1.1.1.1",
+                                    "name": "de 1.1.1.1",
+                                    "data": {},
+                                    "children": []
+                                },
+                                {
+                                    "id": "de 1.1.1.2",
+                                    "name": "de 1.1.1.2",
+                                    "data": {},
+                                    "children": []
+                                }]
+                        }]
+                },
+                {
+                    "id": "wo 1.2",
+                    "name": "wo 1.2",
+                    "data": {},
+                    "children": []
+                }]
+        },
+        {
+            "id": "ph 2",
+            "name": "ph 2",
+            "data": {},
+            "children": [
+                {
+                    "id": "wo 2.1",
+                    "name": "wo 2.1",
+                    "data": {},
+                    "children": [
+                        {
+                            "id": "em 2.1.1",
+                            "name": "em 2.1.1",
+                            "data": {},
+                            "children": []
+                        },
+                        {   
+                            "id": "em 2.1.2",
+                            "name": "em 2.1.2",
+                            "data": {},
+                            "children": []
+                        }]
+                }]
+        },
+        {
+            "id": "ph 3",
+            "name": "ph 3",
+            "data": {},
+            "children": []
+        }]
+}
