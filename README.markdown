@@ -6,7 +6,7 @@ mIDGenes stands for Measuring IDea GENeration EffectivenesS, an online tool to d
 
 The tool currently allows to calculate the different variety metrics (Shah, Nelson, Chakrabarti, our own, ...) based on a tree representation of the idea space of a idea generation exercise (e.g. Brainstorming, TRIZ, ...).
 
-This software is completely in Javascript and no data is stored on the server (allows researchers to easily test metrics without uploading them to a community), basically all a user needs to do, is go to the URL and start using it (URL to free version will be added soon here) .
+This software is completely in Javascript and no data is stored on the server (allows researchers to easily test metrics without uploading them to a community), basically all a user needs to do, is go to the URL. The URL is published on the KULeuven/CIB internet <http://www.mech.kuleuven.be/en/cib/s/midgenes>.
 
 The idea behind the software is that our idea generation effectiveness metrics (variety, novelty, ...) need to be validated on a number of examples. The software allows everyone to test, check and compare new metrics against uploaded versions of the existing metrics and uploaded example idea trees (even from real-life idea generation studies). 
 
