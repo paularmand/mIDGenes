@@ -41,6 +41,7 @@ The idea behind the software is that our idea generation effectiveness metrics (
     - Add a function for the Srinivasan & Chakrabarti variety metrics
 
 ##LICENSE
+### mIDGenes
 The Apache License, Version 2.0 applies to the mIDGenes software, also see below. 
 
 *******************************************************************************************************************************
@@ -61,4 +62,8 @@ LICENSE
    limitations under the License.IdEM - IDea Evaluation Metrics
 
 *******************************************************************************************************************************
+
+### Included libs
+The included libraries are in the libs folder. The included software or libs are under their own license, so check that out first.
+
 
