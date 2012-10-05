@@ -40,15 +40,16 @@ var metric_function_order = [
     'var_nelson_w_10_5_2_1',
     'var_nelson_w_10_6_3_1',
     'var_nelson_norm_w_10_5_2_1',
-    'var_nelson_norm_w_10_6_3_1'];  // Change the order and add a function
+    'var_nelson_norm_w_10_6_3_1',
+    'var_pave_entropy'];  // Change the order and add a function
 
 var metric_function = {
     'var_nelson_norm_w_10_5_2_1': 'variety_nelson_normalized_weights_10_5_2_1',
     'var_nelson_norm_w_10_6_3_1': 'variety_nelson_normalized_weights_10_6_3_1',
     'var_nelson_w_10_5_2_1': 'variety_nelson_weights_10_5_2_1',
     'var_nelson_w_10_6_3_1': 'variety_nelson_weights_10_6_3_1',
-    'var_shah_simplified': 'variety_shah_simplified' 
-//     'var_pave': 'variety_pave'
+    'var_shah_simplified': 'variety_shah_simplified', 
+    'var_pave_entropy': 'variety_pave'
     // to add af function: add the following:   ,'description_of_you_function': 'name_of_your_function'
 }
 
@@ -133,6 +134,42 @@ function variety_nelson_base (root_node, label, node, level, participant, level_
     }
     return variety;
 }
+
+function variety_pave (root_node, label, node, level, participant) {
+    // NOT defined for "root" level
+    if (level == 0) {return '-';}
+
+    var arr_child_nr_of_nodes = [];
+    var arr_child_probability = [];
+
+    // Get the probability for each node on the specified level
+        // store the ideas on the nodes
+        compute_ideas_for_tree(root_node);
+        // Calculate the total number of concepts on and below this level
+        var total_number_of_ideas_at_level = compute_ideas_on_a_level(root_node, level);
+        console.log('bkmax (' + level + ') equals ' + total_number_of_ideas_at_level);
+        root_node.eachLevel(level, level, function(child_node) {
+            var temp_compute_ideas_for_tree = compute_ideas_for_tree(child_node);
+            arr_child_probability.push(temp_compute_ideas_for_tree/total_number_of_ideas_at_level);
+            console.log('child ' + child_node.id + ' has ' + temp_compute_ideas_for_tree + ' concepts below , pi = ' + temp_compute_ideas_for_tree/total_number_of_ideas_at_level)
+        });
+
+    // Calculate the entropy from the probability
+        // Transforming to vector (which work with sylvester's math library
+        console.log('entropy (level ' + level + '), log with base = ' + arr_child_probability.length);
+        var vec_child_probability = $V(arr_child_probability);
+        // Calculate the entropy
+        var vec_child_probability_log = $V(arr_child_probability.logarithm(arr_child_probability.length));	// log of the probability vector
+        var entropy = - (vec_child_probability.dot(vec_child_probability_log));	// calculate the variety as the sum of products
+
+    // Calculate the pave_variety
+        var bk_divided_by_bkmax = arr_child_probability.length / total_number_of_ideas_at_level;
+        var variety = 10 * (bk_divided_by_bkmax * entropy);
+
+    //root_node.data.variety = variety;
+    return variety;
+}
+
 
     /*
     * Computes the number of nodes on a level (relative to the node in argument)
