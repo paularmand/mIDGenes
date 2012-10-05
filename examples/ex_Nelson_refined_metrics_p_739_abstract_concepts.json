@@ -1,0 +1,120 @@
+{	
+    "id": "root",
+    "data": {
+      "user": {
+	"nr_ideas" : 0,
+	"name": "root"
+      }
+    },
+    "children": [
+        {
+            "id": "ph 1",
+            "data": {
+	      "user": {
+		"nr_ideas" : 0,
+		"name": "ph 1"
+	      }
+	    },
+            "children": [
+                {
+                    "id": "wo 1.1",
+                    "data": {
+		      "user": {
+			"nr_ideas" : 2,
+			"name": "wo 1.1"
+		      }
+		    },
+                    "children": [
+                        {
+                            "id": "em 1.1.1",
+                            "data": {
+			      "user": {
+				"nr_ideas" : 1,
+				"name": "em 1.1.1"
+			      }
+			    },
+                            "children": [
+                                {
+                                    "id": "de 1.1.1.1",
+                                    "data": {
+				      "user": {
+					"nr_ideas" : 1,
+					"name": "de 1.1.1.1"
+				      }
+				    },
+                                    "children": []
+                                },
+                                {
+                                    "id": "de 1.1.1.2",
+                                    "data": {
+				      "user": {
+					"nr_ideas" : 1,
+					"name": "de 1.1.1.2"
+				      }
+				    },
+                                    "children": []
+                                }]
+                        }]
+                },
+                {
+                    "id": "wo 1.2",
+                    "data": {
+		      "user": {
+			"nr_ideas" : 1,
+			"name": "wo 1.2"
+		      }
+		    },
+                    "children": []
+                }]
+        },
+        {
+            "id": "ph 2",
+            "data": {
+	      "user": {
+		"nr_ideas" : 2,
+		"name": "ph 2"
+	      }
+	    },
+            "children": [
+                {
+                    "id": "wo 2.1",
+                    "data": {
+		      "user": {
+			"nr_ideas" : 1,
+			"name": "wo 2.1"
+		      }
+		    },
+                    "children": [
+                        {
+                            "id": "em 2.1.1",
+                            "data": {
+			      "user": {
+				"nr_ideas" : 1,
+				"name": "em 2.1.1"
+			      }
+			    },
+                            "children": []
+                        },
+                        {   
+                            "id": "em 2.1.2",
+                            "data": {
+			      "user": {
+				"nr_ideas" : 1,
+				"name": "em 2.1.2"
+			      }
+			    },
+                            "children": []
+                        }]
+                }]
+        },
+        {
+            "id": "ph 3",
+            "data": {
+	      "user": {
+		"nr_ideas" : 1,
+		"name": "ph 3"
+	      }
+	    },
+            "children": []
+        }]
+}

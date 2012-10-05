@@ -1,13 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>ISE / Idea Space Evaluation</title>
+<title>mIDGenes - Measuring IDea GENeration EffectivenesS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta name="Description" content="ISE Idea Space Evaluation, variety, novelty, idea effectiveness, idea space" />
-<meta name="Keywords" content="ISE Idea Space Evaluation, variety, novelty, idea effectiveness, idea space" />
+<meta name="Description" content="mIDGenes - Measuring IDea GENeration EffectivenesS, variety, novelty, idea effectiveness, idea space" />
+<meta name="Keywords" content="mIDGenes - Measuring IDea GENeration EffectivenesS, variety, novelty, idea effectiveness, idea space" />
 <link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/main.css" title="default" media="screen, projection" />
 <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/IE.css" media="screen, projection" /><![endif]-->
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24250103-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -30,7 +43,7 @@
             <input tabindex="5" type="text" name="words" id="words" title="enter a keyword for searching"/><input tabindex="6" type="image" class="magnifier" src="https://stijl.kuleuven.be/_i/icons/icon_magnifier.gif" alt="verstuur" title="zoek nu"/><input type="hidden" name="oproep" value="zoek" />
         </form>
     </div><!-- end header -->
-    <div id="mainnav">
+<!--    <div id="mainnav">
         <h2 class="access">Navigatie</h2>
         <ul>
             <li><a href="http://www.kuleuven.be/about/">About K.U.Leuven</a></li>
@@ -43,19 +56,18 @@
             <li><a href="http://www.kuleuven.be/english/faculties_schools.html">Faculties, Departments &amp; Schools</a></li>
             <li><a href="http://www.kuleuven.be/international/index.html">International cooperation</a></li>
         </ul>
-    </div>
-    <div id="content_background" style="background-image: url(../images/fist_small.gif); background-repeat: no-repeat; background-position:right top;" >
+    </div>-->
+<!--    <div id="content_background" style="background-image: url(../images/fist_small.gif); background-repeat: no-repeat; background-position:right top;" >-->
         <div id="contentwrapper">
             <br />
             <center><a href="./../">Home</a> | Documentation</center>
             <div id="content">
             <!--    <h1 >FIST / Framework to develop Idea Space evaluation metrics and Tools</h1>-->
     <div id="top-container">
-        <h1><a href="./../">FIST / Framework to develop Idea Space evaluation metrics and Tools</a></h1>
+        <h1><a href="./../">mIDGenes - Measuring IDea GENeration EffectivenesS</a></h1>
         This software was developed by the <a href="http://www.mech.kuleuven.be/en/cib/imresearch/cibdesign">Design Methodologies and Life Cycle Engineering</a>
         group of the <a href="http://www.mech.kuleuven.be/en/cib/">CIB - Centre for Industrial Management / Traffic and Infrastructure</a>
-        at the Katholieke University Leuven in Belgium.
-        <br />It's primary focus is supporting the development of metrics to evaluate an idea space, in turn this can be used to evaluate idea generation methods (like brainstorming, ...).
+        at the Katholieke University Leuven in Belgium. It's primary focus is supporting the development of metrics to evaluate an idea space, in turn this can be used to evaluate idea generation methods (like brainstorming, ...).
       
     </div>
 
@@ -69,57 +81,117 @@
                     <br /><br />
 
                 <b>Example JSON source and corresponding visual representation</b>
-                    <table><td width="55%"><pre>{
-                      "id": "0",
-                      "name": "Transport",
-                      "data": {},
-                      "children": [{
-                        "id": "ph 1",
-                        "name": "Combustion",
-                        "data": {},
-                        "children": [{
-                          "id": "wo 1.1",
-                          "name": "Comb.Engine",
-                          "data": {},
-                          "children": [{
-                              "id": "em 1.1.1",
-                              "name": "Rotational",
-                              "data": {"Participant": [1,4], "feasibility_rating": 2},
-                              "children": []
-                              }, {
-                              "id": "em 1.1.2",
-                              "name": "Standard",
-                              "data": {"Participant": [1,3], "feasibility_rating": 3},
-                              "children": []
-                          }]
-                        }]
-                      }, {
-                          "id": "ph 2",
-                          "name": "Electrical",
-                          "data": {},
-                          "children": [{
-                            "id": "wo 2.1",
-                            "name": "Elec. engine",
-                            "data": {"Participant": [2,3], "feasibility_rating": 5},
-                            "children": [{
-                                "id": "em 2.1.1",
-                                "name": "Bat.Power",
-                                "data": {"Participant": [2,3], "feasibility_rating": 5},
-                                "children": []
-                                },{
-                                "id": "em 2.1.2",
-                                "name": "SolarPower",
-                                "data": {"Participant": [2,3], "feasibility_rating": 5},
-                                "children": []
-                                }]
-                            }, {
-                            "id": "wo 2.1.2",
-                            "name": "Electrostatic",
-                            "data": {"Participant": [2,3], "feasibility_rating": 5},
-                            "children": []
-                          }]
-                      }]
-                    }</pre></td><td>Visual representation of the example JSON Tree <img src="./tree_example_2.jpg" /></td>
+                    <table><td width="55%"><pre>{	
+  "id": "root",
+  "data": {
+    "user": {
+      "nr_ideas" : 0,
+      "name": "Transport"
+    }
+  },
+  "children": [
+    {
+      "id": "ph 1",
+      "data": {
+	"user": {
+	  "name": "Combustion",
+	  "nr_ideas" : 0
+	}
+      },
+      "children": [
+	{
+	  "id": "wo 1.1",
+	  "data": {
+	    "user": {
+	      "name": "CombusEngine",
+	      "nr_ideas" : 0
+	    }
+	  },
+	  "children": [ 
+	    {
+	      "id": "wo 1.1.1",
+	      "data": {
+		"user": {
+		  "name": "Rotational",
+		  "nr_ideas" : 2
+		}
+	      },
+	      "children": []
+	    }
+	    ,{
+	      "id": "wo 1.1.2",
+	      "data": {
+		"user": {
+		  "name": "Standard",
+		  "nr_ideas" : 5
+		}
+	      },
+	      "children": []
+	    }
+	  ]
+	}
+      ]
+    },
+    {
+      "id": "ph 2",
+      "data": {
+	"user": {
+	  "name": "Electrical",
+	  "nr_ideas" : 0
+	}
+      },
+      "children": [
+	{
+	  "id": "wo 2.1",
+	  "data": {
+	    "user": {
+	      "nr_ideas" : 1,
+	      "name": "ElecEngine",
+	      "Participant": [2,3], 
+	      "feasibility_rating": 5
+	    }
+	  },
+	  "children": [
+	    {
+	      "id": "em 2.1.1",
+	      "data": {
+		"user": {
+		  "nr_ideas" : 1,
+		  "name": "BatPower",
+		  "Participant": [2,3], 
+		  "feasibility_rating": 5
+		}
+	      },
+	      "children": []
+	    },
+	    {
+	      "id": "em 2.1.2",
+	      "data": {
+		"user": {
+		  "nr_ideas" : 1,
+		  "name": "SolarPower",
+		  "Participant": [2,8],
+		  "feasibility_rating": 5
+		}
+	      },
+	      "children": []
+	    }
+	  ]
+	},
+	{
+	  "id": "wo 2.2",
+	  "data": {
+	    "user": {
+	      "name": "Electrostatic",
+	      "nr_ideas" : 1
+	    }
+	  },
+	  "children": []
+	}
+      ]
+    }
+  ]
+}</pre></td><td>Visual representation of the example JSON Tree <img src="./tree_example_2.jpg" /></td>
                     </table>
 
             <h2>Documentation on idea space metrics</h2>
@@ -142,6 +214,7 @@
                 Srinivasan, V., & Chakrabarti, A. (2010). Investigating Novelty-Outcome
                 relationships in engineering design. Artificial Intelligence for Engineering
                 Design, Analysis and Manufacturing, 24 , 161-178.
+		Verhaegen P.-A. , Vandevenne D., Peeters j., Duflou J.R., Refinements to the variety metric for idea evaluation, Design Studies, Available online 8 September 2012, ISSN 0142-694X, 10.1016/j.destud.2012.08.003. (http://www.sciencedirect.com/science/article/pii/S0142694X12000580)<br />
 
 
             <h3>Novelty</h3>
@@ -173,14 +246,14 @@
                     Linsey, J. S. (2007). Design-by-Analogy and Representation in Innovative
                     Engineering Concept Generation. Ph.D. thesis The University of Texas
                     Austin, Texas.<br />
-                    Peeters, J., Verhaegen, P., Vandevenne, D., & Duflou, J. (2010). Refined
+                    Peeters, J., Verhaegen, P.-A., Vandevenne, D., & Duflou, J. (2010). Refined
                     metrics for measuring novelty in ideation. Bordeaux.<br />
 
                 &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />            &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
             </div>
         </div><!--end contentwrapper-->
         <div id="footer">
-          <h1>FIST / Framework to develop Idea Space evaluation metrics and Tools</h1>
+          <h1>mIDGenes - Measuring IDea GENeration EffectivenesS</h1>
       Quantitative Evaluation of Idea Spaces / Copyright (c) 2011, Paul-Armand Verhaegen / All rights reserved /
       Based on the <a href="http://thejit.org">JavaScript InfoVis Toolkit</a><br />
       Like most sites, this one also works with IE (slow), but it works a lot better in Chrome (or Chromium) or Firefox (consider using these).<p class="container"><img src="https://stijl.kuleuven.be/_i/sedes.gif" alt="K.U.Leuven" width="42" id="sedes" /></p>

@@ -40,16 +40,17 @@ var metric_function_order = [
     'var_nelson_w_10_5_2_1',
     'var_nelson_w_10_6_3_1',
     'var_nelson_norm_w_10_5_2_1',
-    'var_nelson_norm_w_10_6_3_1'];  // Change the order and add a function
+    'var_nelson_norm_w_10_6_3_1',
+    'var_pave_herfindahl'];  // Change the order and add a function
 
 var metric_function = {
     'var_nelson_norm_w_10_5_2_1': 'variety_nelson_normalized_weights_10_5_2_1',
     'var_nelson_norm_w_10_6_3_1': 'variety_nelson_normalized_weights_10_6_3_1',
     'var_nelson_w_10_5_2_1': 'variety_nelson_weights_10_5_2_1',
     'var_nelson_w_10_6_3_1': 'variety_nelson_weights_10_6_3_1',
-    'var_shah_simplified': 'variety_shah_simplified' 
-//     'var_pave': 'variety_pave'
-    // to add af function: add the following:   ,'description_of_you_function': 'name_of_your_function'
+    'var_shah_simplified': 'variety_shah_simplified', 
+    'var_pave_herfindahl': 'variety_pave_herfindahl'
+    // to add a function: add the following:   ,'description_of_you_function': 'name_of_your_function'
 }
 
 function variety_shah_simplified (root_node, label, node, level, participant) {
@@ -64,25 +65,30 @@ function variety_shah_simplified (root_node, label, node, level, participant) {
     if (level != 0) {return '-';}
 
     // Get the variety for level 1
-    var total_nr_of_concepts = compute_ideas_for_tree(root_node); // stores the number of ideas on each node
+    var total_nr_of_concepts = calc_ideas_in_subgraph (root_node); // stores the number of ideas on each node
     var total_number_of_nodes_at_level = [];
+    
     // for each level calculate the number of nodes
     for (var iter_level = 1; iter_level <= level_weights.length; iter_level++) {
         total_number_of_nodes_at_level[iter_level-1] = 0;
         root_node.eachLevel(iter_level, iter_level, function(child_node) {
-            total_number_of_nodes_at_level[iter_level-1]++;
+	  total_number_of_nodes_at_level[iter_level-1]++;
         });
-        variety += total_number_of_nodes_at_level[iter_level-1] * level_weights[iter_level-1] / total_nr_of_concepts;
+	console.log('*'+total_number_of_nodes_at_level);
+	variety += total_number_of_nodes_at_level[iter_level-1] * level_weights[iter_level-1] / total_nr_of_concepts;
+	console.log('***'+variety);
     }
-    return variety;
+    return variety;		
+
 }
 
 function variety_nelson_normalized_weights_10_5_2_1 (root_node, label, node, level, participant) {
     // only defined for "root" level (well actually 1 below root level)
     if (level != 0) {return '-';}
     var level_weights = [10, 5, 2, 1];
+//     console.log('** number_of_differentiations_in_subgraph: *'+ number_of_differentiations_in_subgraph (root_node));
     return variety_nelson_base (root_node, label, node, level, participant, level_weights) / 
-        (compute_ideas_for_tree (root_node) - 1);
+        (max_number_of_differentiations_in_subgraph (root_node));
 }
 
 function variety_nelson_normalized_weights_10_6_3_1 (root_node, label, node, level, participant) {
@@ -90,7 +96,7 @@ function variety_nelson_normalized_weights_10_6_3_1 (root_node, label, node, lev
     if (level != 0) {return '-';}
     var level_weights = [10, 6, 3, 1];
     return variety_nelson_base (root_node, label, node, level, participant, level_weights) /
-        (compute_ideas_for_tree (root_node) - 1);
+        (max_number_of_differentiations_in_subgraph (root_node));
 }
 
 function variety_nelson_weights_10_6_3_1 (root_node, label, node, level, participant) {
@@ -134,8 +140,17 @@ function variety_nelson_base (root_node, label, node, level, participant, level_
     return variety;
 }
 
+/*
+ * Returns the number of differentiations (according to Nelson et al.), e.g. (number of childnodes - 1 ) = # of differentiations to a node.
+ * 
+ */
+function max_number_of_differentiations_in_subgraph (node) {
+  // Also equals the number of ideas minus one, which is better as expressed by Nelson 
+  // as being the maximum number of differentiations
+  return calc_ideas_in_subgraph(node) - 1;
+}
     /*
-    * Computes the number of nodes on a level (relative to the node in argument)
+    * Computes the number of nodes on a level in the subgraph of node (level is relative to node in argument)
     *
     */
 function compute_nodes_on_level (node, level) {
@@ -161,27 +176,85 @@ function compute_ideas_on_a_level (node, level) {
     return sum_nr_ideas_on_level;     
 }
 
-    /*
-    * Computes and stores the number of ideas in the node and number of ideas in the subgraph in each node
-    * Each node will contain a node.data.ise_nr_ideas_in_node and a node.data.ise_nr_ideas_in_subgraph property containing these values
-    *	
-    */
-function compute_ideas_for_tree (node) {
-    // recursively store the number of ideas in each node of the tree
-    if (isLeafNode(node)) { // If the node is a leaf, then number of ideas in node = 1
-	node.data.ise_nr_ideas_in_subgraph = 0; 
-	node.data.ise_nr_ideas_in_node = 1;
-    }
-    else {	// If node has children then store the sum of the 'compute_ideas_for_tree ( )' of the children
-	node.data.ise_nr_ideas_in_node = 0;
-	// find the number of ideas in the children (recursive)
-	node.data.ise_nr_ideas_in_subgraph = 0;
-	var arr_child_nodes = node.getSubnodes([1,1]); // only gets direct children (no grand children)
-	for (var my_iter_i = 0; my_iter_i < arr_child_nodes.length ; my_iter_i++) {
-	    node.data.ise_nr_ideas_in_subgraph = node.data.ise_nr_ideas_in_subgraph + compute_ideas_for_tree(arr_child_nodes[my_iter_i]); 
-	}
-    }
-    // Sum the number of ideas in node with the number of ideas in subgraph and return
-    node.data.ise_nr_ideas_in_subgraph = node.data.ise_nr_ideas_in_subgraph + node.data.ise_nr_ideas_in_node;
-    return node.data.ise_nr_ideas_in_subgraph;     
+/* Computes the variety according to Paul-Armand Verhaegen's proposal in Design Studies
+ * i.e. by multiplying with the inverse Herfindahl to account for the distribution of ideas over nodes
+ * 
+ * 
+ */
+function variety_pave_herfindahl (root_node, label, node, level, participant) {
+    // Shah notation in formulas:
+    // level_weights[level] as "Sk"
+    // total_number_of_nodes_at_level[level] = "bk"
+
+    // only defined for "root" level (well actually 1 below root level)
+    if (level == 0) {return '-';}
+
+    // Calculate the Herfindahl for that level
+    herfindahl = 0;
+    
+    // herfindahl terms for the existing nodes
+    root_node.eachLevel(level, level, function(iter_node) {
+      probability_of_node = calc_ideas_in_subgraph(iter_node)/calc_ideas_in_subgraph(root_node);
+//       console.log("prob was" + probability_of_node);
+      herfindahl += (probability_of_node * probability_of_node);
+    });
+    console.log("explicit herfindahl at level " + level + " : " + herfindahl);
+    
+    // Herfindahl terms for the non-existing implicit nodes (only higher level ones), see explanation in article Design Studies
+    for(iter_level = level - 1; iter_level > 0; iter_level--) {
+      root_node.eachLevel(iter_level, iter_level, function(iter_node) {
+	// a node should have a lower level implicit node (with nr_ideas ideas) if it has nr_ideas not equal to zero
+	ideas_in_implicit_node = retrieve_user_data(iter_node, "nr_ideas");
+	if (ideas_in_implicit_node > 0) {
+	  probability_of_node = ideas_in_implicit_node/calc_ideas_in_subgraph(root_node);
+	  console.log("prob was" + probability_of_node);
+	  herfindahl += (probability_of_node * probability_of_node);
+	};
+      });    
+    };
+    console.log("herfindahl at level " + level + " : " + herfindahl);    
+    
+    // Calculate the Variety
+    variety = 10 / (calc_ideas_in_subgraph(root_node) * herfindahl);
+    console.log("herfindahl variety at level " + level + " : " + variety);
+    return variety;
+}
+
+/* 
+ * previous proposal: entropy (problem is that it's not always monotonically increasing from lower to higher levels
+ * 
+*/
+function variety_pave_entropy (root_node, label, node, level, participant) {
+    // NOT defined for "root" level
+    if (level == 0) {return '-';}
+
+    var arr_child_nr_of_nodes = [];
+    var arr_child_probability = [];
+
+    // Get the probability for each node on the specified level
+        // store the ideas on the nodes
+        compute_ideas_for_tree(root_node);
+        // Calculate the total number of concepts on and below this level
+        var total_number_of_ideas_at_level = compute_ideas_on_a_level(root_node, level);
+        console.log('bkmax (' + level + ') equals ' + total_number_of_ideas_at_level);
+        root_node.eachLevel(level, level, function(child_node) {
+            var temp_compute_ideas_for_tree = compute_ideas_for_tree(child_node);
+            arr_child_probability.push(temp_compute_ideas_for_tree/total_number_of_ideas_at_level);
+            console.log('child ' + child_node.id + ' has ' + temp_compute_ideas_for_tree + ' concepts below , pi = ' + temp_compute_ideas_for_tree/total_number_of_ideas_at_level)
+        });
+
+    // Calculate the entropy from the probability
+        // Transforming to vector (which work with sylvester's math library
+        console.log('entropy (level ' + level + '), log with base = ' + arr_child_probability.length);
+        var vec_child_probability = $V(arr_child_probability);
+        // Calculate the entropy
+        var vec_child_probability_log = $V(arr_child_probability.logarithm(arr_child_probability.length));	// log of the probability vector
+        var entropy = - (vec_child_probability.dot(vec_child_probability_log));	// calculate the variety as the sum of products
+
+    // Calculate the pave_variety
+        var bk_divided_by_bkmax = arr_child_probability.length / total_number_of_ideas_at_level;
+        var variety = 10 * (bk_divided_by_bkmax * entropy);
+
+    //root_node.data.variety = variety;
+    return variety;
 }
