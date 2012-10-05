@@ -20,7 +20,7 @@
                     "id": "wo 1.1",
                     "data": {
 		      "user": {
-			"nr_ideas" : 0,
+			"nr_ideas" : 2,
 			"name": "wo 1.1"
 		      }
 		    },
@@ -29,7 +29,7 @@
                             "id": "em 1.1.1",
                             "data": {
 			      "user": {
-				"nr_ideas" : 0,
+				"nr_ideas" : 1,
 				"name": "em 1.1.1"
 			      }
 			    },
@@ -71,7 +71,7 @@
             "id": "ph 2",
             "data": {
 	      "user": {
-		"nr_ideas" : 0,
+		"nr_ideas" : 2,
 		"name": "ph 2"
 	      }
 	    },
@@ -80,7 +80,7 @@
                     "id": "wo 2.1",
                     "data": {
 		      "user": {
-			"nr_ideas" : 0,
+			"nr_ideas" : 1,
 			"name": "wo 2.1"
 		      }
 		    },

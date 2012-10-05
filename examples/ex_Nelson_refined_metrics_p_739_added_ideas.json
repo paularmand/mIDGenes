@@ -38,7 +38,7 @@
                                     "id": "de 1.1.1.1",
                                     "data": {
 				      "user": {
-					"nr_ideas" : 1,
+					"nr_ideas" : 2,
 					"name": "de 1.1.1.1"
 				      }
 				    },
@@ -89,7 +89,7 @@
                             "id": "em 2.1.1",
                             "data": {
 			      "user": {
-				"nr_ideas" : 1,
+				"nr_ideas" : 3,
 				"name": "em 2.1.1"
 			      }
 			    },
@@ -99,7 +99,7 @@
                             "id": "em 2.1.2",
                             "data": {
 			      "user": {
-				"nr_ideas" : 1,
+				"nr_ideas" : 2,
 				"name": "em 2.1.2"
 			      }
 			    },
@@ -111,7 +111,7 @@
             "id": "ph 3",
             "data": {
 	      "user": {
-		"nr_ideas" : 1,
+		"nr_ideas" : 2,
 		"name": "ph 3"
 	      }
 	    },

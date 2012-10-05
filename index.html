@@ -5,51 +5,75 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="Description" content="mIDGenes - Measuring IDea GENeration EffectivenesS, variety, novelty, idea effectiveness, idea space" />
 <meta name="Keywords" content="mIDGenes - Measuring IDea GENeration EffectivenesS, variety, novelty, idea effectiveness, idea space" />
-<link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/main.css" title="default" media="screen, projection" />
-<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/IE.css" media="screen, projection" /><![endif]-->
+
 <!-- CSS Files -->
-<link type="text/css" href="./css/base.css" rel="stylesheet" />
-<link type="text/css" href="./css/Spacetree.css" rel="stylesheet" />
-<link type="text/css" href="./libs/jquery/jquery_ui/css/ui-lightness/jquery-ui-1.8.9.custom.css" rel="stylesheet" />
-<link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-f2d480c/slick.grid.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-f2d480c/css/smoothness/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-f2d480c/examples/examples.css" type="text/css" media="screen" charset="utf-8" />
+  <!-- KU Leuven style -->
+  <link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/main.css" title="default" media="screen, projection" />
+  <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://stijl.kuleuven.be/_c/IE.css" media="screen, projection" /><![endif]-->
+
+  <!-- JavaScript InfoVis Toolkit styles -->
+  <link type="text/css" href="./css/base.css" rel="stylesheet" />
+  <link type="text/css" href="./css/Spacetree.css" rel="stylesheet" />
 <!--[if IE]><script language="javascript" type="text/javascript" src="./libs/Jit/Extras/excanvas.js"></script><![endif]-->
 
+  <!-- Jquery UI styles -->  
+  <link type="text/css" href="./libs/jquery/jquery_ui/css/ui-lightness/jquery-ui-1.8.9.custom.css" rel="stylesheet" />
+
+  <!-- Slickgrid styles -->  
+  <link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/slick.grid.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/css/smoothness/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/examples/examples.css" type="text/css" media="screen" charset="utf-8" />
+
 <!-- JS Files -->
-<script type="text/javascript" src="./libs/jquery/douglascrockford-JSON-js-633fe5a/json2.js"></script>
-<script language="javascript" type="text/javascript" src="./libs/jit/jit.js"></script>
-<script language="javascript" type="text/javascript" src="./libs/jquery/jquery-1.4.5.min.js"></script>
-<script type="text/javascript" src="./libs/jquery/cookies/jquery.cookies.2.2.0.min.js"></script>
-<script language="javascript" type="text/javascript" src="./libs/jquery/jquery.rightClick.js"></script>
-<script language="javascript" type="text/javascript" src="./user_functions_public.js"></script>
-<script language="javascript" type="text/javascript" src="./libs/jquery/jquery_contextmenu/jquery.contextMenu.js"></script>
-<script language="javascript" type="text/javascript" src="./libs/sylvester_math_lib/sylvester.js"></script>
-<script type="text/javascript" src="./libs/jquery/jquery_ui/js/jquery-ui-1.8.9.custom.min.js"></script>
-<script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-f2d480c/lib/jquery.event.drag-2.0.min.js"></script>
-<script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-f2d480c/slick.core.js"></script>
-<script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-f2d480c/slick.grid.js"></script>
-<script type="text/javascript" src="./libs/jquery/dcneiner-Downloadify-f96cbe7/js/downloadify.min.js"></script>
-<script type="text/javascript" src="./libs/jquery/dcneiner-Downloadify-f96cbe7/js/swfobject.js"></script>
-<!-- ISE javascript files -->
-<script language="javascript" type="text/javascript" src="./ise/ise_v2.js"></script> <!--http://refresh-sf.com/yui/-->
-<script language="javascript" type="text/javascript" src="./user_functions_helpers.js"></script>
+  <!-- JSON scripts -->
+  <script type="text/javascript" src="./libs/jquery/douglascrockford-JSON-js-633fe5a/json2.js"></script>
 
-<script type="text/javascript">
+  <!-- JavaScript InfoVis Toolkit scripts -->
+  <script language="javascript" type="text/javascript" src="./libs/jit/jit.js"></script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24250103-1']);
-  _gaq.push(['_trackPageview']);
+  <!-- Jquery scripts -->
+  <script language="javascript" type="text/javascript" src="./libs/jquery/jquery-1.4.5.min.js"></script>
+  <script type="text/javascript" src="./libs/jquery/cookies/jquery.cookies.2.2.0.min.js"></script>
+  <script language="javascript" type="text/javascript" src="./libs/jquery/jquery.rightClick.js"></script>
+  <script language="javascript" type="text/javascript" src="./libs/jquery/jquery_contextmenu/jquery.contextMenu.js"></script>
+  <script type="text/javascript" src="./libs/jquery/jquery_ui/js/jquery-ui-1.8.9.custom.min.js"></script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  <!-- math scripts -->  
+  <script language="javascript" type="text/javascript" src="./libs/sylvester_math_lib/sylvester.js"></script>
 
-</script>
+  <!-- slickgrid scripts -->  
+  <script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/lib/jquery.event.drag-2.0.min.js"></script>
+  <script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/slick.core.js"></script>
+  <script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/slick.editors.js"></script>
+  <script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/slick.formatters.js"></script>
+  <script type="text/javascript" src="./libs/slickgrid/mleibman-SlickGrid-cc7bd21/slick.grid.js"></script>
+
+
+  <!-- downloadify scripts -->  
+  <script type="text/javascript" src="./libs/jquery/dcneiner-Downloadify-f96cbe7/js/downloadify.min.js"></script>
+  <script type="text/javascript" src="./libs/jquery/dcneiner-Downloadify-f96cbe7/js/swfobject.js"></script>
+
+  <!-- mIDGenes javascript files -->
+  <script language="javascript" type="text/javascript" src="./midgenes/midgenes_v2.js"></script> <!--http://refresh-sf.com/yui/-->
+  <script language="javascript" type="text/javascript" src="./user_functions_helpers.js"></script>
+  <script language="javascript" type="text/javascript" src="./user_functions_public.js"></script>
+
+  <!-- Google analytics code -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24250103-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </head>
-<body onLoad="init();">
+
+<body onLoad="midgenes_init();">
 <div id="wrapper">
 <div id="header">
         <h2 class="access">Taakbalk</h2>
@@ -109,13 +133,17 @@
                 <div class="selDiv">
                     <select class="opts">
                             <option value="dummy">...</option>
-                            <option value="example1.json">example1.json</option>
-                            <option value="example2.json">example2.json</option>
+                            <option value="dummy">---from published articles---</option>
                             <option value="ex_Nelson_refined_metrics_p_739.json">ex_Nelson_refined_metrics_p_739.json</option>
                             <option value="ex_Nelson_refined_metrics_p_740.json">ex_Nelson_refined_metrics_p_740.json</option>
-                            <option value="ex_Pave_refinements_to_the_var_p_9.json">ex_Pave_refinements_to_the_var_p_9.json</option>
-                            <option value="ex_Pave_refinements_to_the_var_p_13.json">ex_Pave_refinements_to_the_var_p_13.json</option>
-                            <option value="ex_Pave_refinements_to_the_var_p_13_bis.json">ex_Pave_refinements_to_the_var_p_13_bis.json</option>
+                            <option value="ex_Nelson_refined_metrics_p_740_bis.json">ex_Nelson_refined_metrics_p_740_bis.json</option>
+                            <option value="ex_Pave_refinements_to_the_var_p_15.json">ex_Pave_refinements_to_the_var_p_15.json</option>
+                            <option value="ex_Pave_refinements_to_the_var_p_15_bis.json">ex_Pave_refinements_to_the_var_p_15_bis.json</option>
+                            <option value="dummy">---multiple ideas in nodes---</option>
+                            <option value="ex_Nelson_refined_metrics_p_739_added_ideas.json">ex_Nelson_refined_metrics_p_739_added_ideas.json</option>
+                            <option value="dummy">---including abstract solutions---</option>
+                            <option value="ex_Nelson_refined_metrics_p_739_abstract_concepts.json">ex_Nelson_refined_metrics_p_739_abstract_concepts.json</option>
+                            <option value="z_test.json">z_test.json</option>
                     </select>
                     <div class="selectupdate">Update</div>
                 </div>
@@ -136,29 +164,34 @@
                             <td><div id="selected_node_id"></div></td>
                         </tr>
                     </table>
-                    <table>
-                        <tbody id="node_data_table">
-                        </tbody>
-                    </table>
                 </div>
                 <h4>Edit the selected node</h4>
+		<div id="node_data_grid" style="width:550px;height:80px;display:none;"></div>
                 <table>
-                    <tr>
-                        <td>
-                            <button id="button_del_node">Delete Node</button><br /><br />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button id="button_add_node">Add Child Node</button><br />
-                        </td>
-                        <td>
-                            <label>Enter New node ID</label><input type="text" name="new_node_id" id="new_node_id" title="Enter New node ID"/><br /><br />
-                        <label>Enter New node name</label><input type="text" name="new_node_name" id="new_node_name" title="New node name"/>&nbsp;&nbsp;
-                        </td>
-                    </tr>
+		  <tr>
+		    <td>
+		      <button id="button_save_node_data">Save node data</button>
+		    </td>
+		    <td>
+		      <button id="button_del_node">Delete Node</button>
+		    </td>
+		  </tr>
+		  <tr><td colspan="100%">&nbsp;</td>
+		  </tr>
+		  <tr>
+		    <td>
+		      <button id="button_add_node">Add Child Node</button><br />
+		    </td>
+		    <td>
+		      <label>Enter New node ID</label><input type="text" name="new_node_id" id="new_node_id" title="Enter New node ID"/><br /><br />
+		      <label>Enter New node name</label><input type="text" name="new_node_name" id="new_node_name" title="New node name"/>&nbsp;&nbsp;
+		    </td>
+		  </tr>
                 </table>
-
+		<table>
+		    <tbody id="node_data_table">
+		    </tbody>
+		</table>
             </div>
 
 <!--            <h3><a href="#">Filter</a></h3>

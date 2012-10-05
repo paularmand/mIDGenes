@@ -1,0 +1,39 @@
+{	
+  "id": "root",
+  "data": {
+    "user": {
+      "nr_ideas" : 0,
+      "name": "root"
+    }
+  },
+  "children": [
+    {
+      "id": "ph 1",
+      "data": {
+	"user": {
+	  "name": "ph 1",
+	  "nr_ideas" : 1
+	}
+      },
+      "children": []
+    },{
+      "id": "ph 2",
+      "data": {
+	"user": {
+	  "name": "ph 2",
+	  "nr_ideas" : 1
+	}
+      },
+      "children": []
+    },{
+      "id": "ph 3",
+      "data": {
+	"user": {
+	  "name": "ph 3",
+	  "nr_ideas" : 1
+	}
+      },
+      "children": []
+    }
+  ]
+}

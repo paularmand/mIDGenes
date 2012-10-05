@@ -1,0 +1,85 @@
+{	
+    "id": "root",
+    "data": {
+      "user": {
+	"nr_ideas" : 0,
+	"name": "root"
+      }
+    },
+    "children": [
+        {
+            "id": "ph 1",
+            "data": {
+	      "user": {
+		"name": "ph 1",
+		"nr_ideas" : 1
+	      }
+	    },
+            "children": [
+                {
+                  "id": "wo 1.1",
+                  "data": {
+		    "user": {
+		      "name": "wo 1.1",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                }, {
+                  "id": "wo 1.2",
+                  "data": {
+		    "user": {
+		      "name": "wo 1.2",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                }]
+        },{
+            "id": "ph 2",
+            "data": {
+	      "user": {
+		"name": "ph 2",
+		"nr_ideas" : 0
+	      }
+	    },
+            "children": [
+                {
+                  "id": "wo 2.1",
+                  "data": {
+		    "user": {
+		      "name": "wo 2.1",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                }, {
+                  "id": "wo 2.2",
+                  "data": {
+		    "user": {
+		      "name": "wo 2.2",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                },{
+                  "id": "wo 2.3",
+                  "data": {
+		    "user": {
+		      "name": "wo 2.3",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                },{
+                  "id": "wo 1.4",
+                  "data": {
+		    "user": {
+		      "name": "wo 1.4",
+		      "nr_ideas" : 1
+		    }
+		  },
+                  "children": []
+                }]
+        }]
+}
