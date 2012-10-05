@@ -1,85 +1,111 @@
 {	
-    "id": "root",
-    "data": {
-      "user": {
-	"nr_ideas" : 0,
-	"name": "root"
-      }
+  "id": "root",
+  "data": {
+    "user": {
+      "nr_ideas" : 0,
+      "name": "Transport"
+    }
+  },
+  "children": [
+    {
+      "id": "ph 1",
+      "data": {
+	"user": {
+	  "name": "Combustion",
+	  "nr_ideas" : 0
+	}
+      },
+      "children": [
+	{
+	  "id": "wo 1.1",
+	  "data": {
+	    "user": {
+	      "name": "CombusEngine",
+	      "nr_ideas" : 0
+	    }
+	  },
+	  "children": [ 
+	    {
+	      "id": "wo 1.1.1",
+	      "data": {
+		"user": {
+		  "name": "Rotational",
+		  "nr_ideas" : 2
+		}
+	      },
+	      "children": []
+	    }
+	    ,{
+	      "id": "wo 1.1.2",
+	      "data": {
+		"user": {
+		  "name": "Standard",
+		  "nr_ideas" : 5
+		}
+	      },
+	      "children": []
+	    }
+	  ]
+	}
+      ]
     },
-    "children": [
-        {
-            "id": "ph 1",
-            "data": {
-	      "user": {
-		"name": "ph 1",
-		"nr_ideas" : 1
-	      }
+    {
+      "id": "ph 2",
+      "data": {
+	"user": {
+	  "name": "Electrical",
+	  "nr_ideas" : 0
+	}
+      },
+      "children": [
+	{
+	  "id": "wo 2.1",
+	  "data": {
+	    "user": {
+	      "nr_ideas" : 1,
+	      "name": "ElecEngine",
+	      "Participant": [2,3], 
+	      "feasibility_rating": 5
+	    }
+	  },
+	  "children": [
+	    {
+	      "id": "em 2.1.1",
+	      "data": {
+		"user": {
+		  "nr_ideas" : 1,
+		  "name": "BatPower",
+		  "Participant": [2,3], 
+		  "feasibility_rating": 5
+		}
+	      },
+	      "children": []
 	    },
-            "children": [
-                {
-                  "id": "wo 1.1",
-                  "data": {
-		    "user": {
-		      "name": "wo 1.1",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                }, {
-                  "id": "wo 1.2",
-                  "data": {
-		    "user": {
-		      "name": "wo 1.2",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                }]
-        },{
-            "id": "ph 2",
-            "data": {
-	      "user": {
-		"name": "ph 2",
-		"nr_ideas" : 0
-	      }
-	    },
-            "children": [
-                {
-                  "id": "wo 2.1",
-                  "data": {
-		    "user": {
-		      "name": "wo 2.1",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                }, {
-                  "id": "wo 2.2",
-                  "data": {
-		    "user": {
-		      "name": "wo 2.2",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                },{
-                  "id": "wo 2.3",
-                  "data": {
-		    "user": {
-		      "name": "wo 2.3",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                },{
-                  "id": "wo 1.4",
-                  "data": {
-		    "user": {
-		      "name": "wo 1.4",
-		      "nr_ideas" : 1
-		    }
-		  },
-                  "children": []
-                }]
-        }]
+	    {
+	      "id": "em 2.1.2",
+	      "data": {
+		"user": {
+		  "nr_ideas" : 1,
+		  "name": "SolarPower",
+		  "Participant": [2,8],
+		  "feasibility_rating": 5
+		}
+	      },
+	      "children": []
+	    }
+	  ]
+	},
+	{
+	  "id": "wo 2.2",
+	  "data": {
+	    "user": {
+	      "name": "Electrostatic",
+	      "nr_ideas" : 1
+	    }
+	  },
+	  "children": []
+	}
+      ]
+    }
+  ]
 }
