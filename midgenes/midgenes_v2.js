@@ -332,7 +332,7 @@ function init_tree_load_save() {
                         $(".opts").val($.cookies.get(cookieName));
                     }
                     else {
-                        file_to_load = $("#.opts option:selected").text()
+                        file_to_load = $("#.opts option:selected").val();
                     }
                     load_json(('./examples/' + file_to_load), true);
                     $.cookies.set(cookieName, file_to_load);
@@ -435,10 +435,10 @@ st = new $jit.ST({  // Creating a spacetree instance
         //id of viz container element
         injectInto: 'infovis',
 	//constrained: false,
-	levelsToShow:3,
+// 	levelsToShow:3,
 	// Orientation
         orientation: "left",  // override default left orientation
-        levelDistance: 40,   //set distance between node and its children
+//         levelDistance: 40,   //set distance between node and its children
 	background: {}, // don't know why but this enable the rings in the background
         // animation
 	duration: 200,
@@ -454,8 +454,8 @@ st = new $jit.ST({  // Creating a spacetree instance
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 20,
-            width: 60,
+//             height: 20,
+//             width: 60,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
@@ -505,8 +505,8 @@ st = new $jit.ST({  // Creating a spacetree instance
 	    
             //set label styles
             var style = label.style;
-            style.width = 60 + 'px';
-            style.height = 17 + 'px';
+//             style.width = 60 + 'px';
+//             style.height = 17 + 'px';
             style.cursor = 'pointer';
             style.color = '#333';
             style.fontSize = '0.8em';
@@ -530,11 +530,15 @@ st = new $jit.ST({  // Creating a spacetree instance
                 //if the node belongs to the last plotted level
                // if(!node.anySubnode("exist")) {
                     //count children number
-                    var count = 0;
-                    node.eachSubnode(function(n) { count++; });
-                    ////assign a node color based on
-                    //how many children it has
-                    node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count];
+		    count = calc_ideas_in_subgraph (node);
+		    scale = count / calc_ideas_in_subgraph(st.graph.getNode(st.root)); 
+		    firstcolor = [190, 190, 190];
+		    secondcolor = [255, 90, 90];
+		    color = getRGBBetweenTwoFixedColors(scale, firstcolor, secondcolor); 
+		    console.log(color);
+// 		    heatmap= ['#a0a0ff', '#a0a0ff', '#a0a0ff', 'a0a0ff', 'a0a0ff', '#a0a0ff', 'a0a0ff', 'a0a0ff', 'a0a0ff', 'a0a0ff', 'a0a0ff', 'a0a0ff', 'a0a0ff'];
+//                     node.eachSubnode(function(n) { count++; });
+                    node.data.$color = color ; //(count > heatmap.length) ? heatmap[(heatmap.length - 1)] : heatmap[count] ;
                // }
             }
         },
@@ -669,4 +673,22 @@ function build_and_show_grid() {
     }
     
     $('#accordion').accordion('resize');
+}
+
+
+/* 
+ * Returns the RGB value (as string) as a scale (input parameter value) between two colors (hardcoded) 
+ * Firstcolor and secondcolor are [R,G,B] encoded arrays (R, B and G are encoded as decimal value ranging from 0 -> 255)
+*/
+
+function getRGBBetweenTwoFixedColors(value, firstcolor, secondcolor)
+{
+  aR = firstcolor[0];  aG = firstcolor[1]; aB=firstcolor[2];  // rgb for our 1st color
+  bR = secondcolor[0]; bG = secondcolor[1]; bB=secondcolor[2];    // rbg for our 2nd color
+ 
+  red   = (bR - aR) * value + aR; red = Math.floor(red); 
+  green = (bG - aG) * value + aG; green = Math.floor(green);
+  blue  = (bB - aB) * value + aB; blue = Math.floor(blue);
+  
+  return "#" + ((1 << 24) + (red << 16) + (green << 8) + blue).toString(16).slice(1);
 }
