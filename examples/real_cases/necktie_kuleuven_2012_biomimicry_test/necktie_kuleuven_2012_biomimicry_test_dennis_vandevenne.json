@@ -1,0 +1,58 @@
+{"id": "root","data": {"user": {"nr_ideas" : 0,"name": "safer_necktie_DVD"}},"children": [
+  {"id": "ph 1","data": {"user": {"name": "magnetism","nr_ideas" : 0}},"children": [
+      {"id": "wo 1.1","data": {"user": {"name": "length of tie","nr_ideas" : 2}},"children": []}
+  ]},
+  {"id": "ph 2","data": {"user": {"name": "physical detachment","nr_ideas" : 0}},"children": [
+      {"id": "wo 2.1","data": {"user": {"name": "buttons","nr_ideas" : 0}},"children": [
+	{"id": "em 2.1.1","data": {"user": {"name": "length of tie","nr_ideas" : 3}},"children": []},
+	{"id": "em 2.1.2","data": {"user": {"name": "bottom of tie","nr_ideas" : 3}},"children": []}
+      ]},
+      {"id": "wo 2.2","data": {"user": {"name": "break wire","nr_ideas" : 0}},"children": [
+	{"id": "em 2.2.1","data": {"user": {"name": "bottom of tie","nr_ideas" : 1}},"children": []},
+	{"id": "em 2.2.2","data": {"user": {"name": "back of neck","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 2.3","data": {"user": {"name": "clip","nr_ideas" : 0}},"children": [
+	{"id": "em 2.3.1","data": {"user": {"name": "bottom of tie","nr_ideas" : 3}},"children": []}
+      ]},
+      {"id": "wo 2.4","data": {"user": {"name": "click system","nr_ideas" : 0}},"children": [
+	{"id": "em 2.4.1","data": {"user": {"name": "knot","nr_ideas" : 1}},"children": []},
+	{"id": "em 2.4.2","data": {"user": {"name": "back of neck","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 2.5","data": {"user": {"name": "weak material","nr_ideas" : 0}},"children": [
+	{"id": "em 2.5.1","data": {"user": {"name": "knot","nr_ideas" : 1}},"children": []},
+	{"id": "em 2.5.2","data": {"user": {"name": "full tie","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 2.6","data": {"user": {"name": "open loop","nr_ideas" : 0}},"children": [
+	{"id": "em 2.6.1","data": {"user": {"name": "back of neck","nr_ideas" : 4}},"children": []}
+      ]},
+      {"id": "wo 2.7","data": {"user": {"name": "Velcro(hooks)","nr_ideas" : 0}},"children": [
+	{"id": "em 2.7.1","data": {"user": {"name": "length of tie","nr_ideas" : 5}},"children": []},
+	{"id": "em 2.7.2","data": {"user": {"name": "bottom of tie & aroudn waste ","nr_ideas" : 1}},"children": []},
+	{"id": "em 2.7.3","data": {"user": {"name": "knot","nr_ideas" : 3}},"children": []},
+	{"id": "em 2.7.4","data": {"user": {"name": "back of neck","nr_ideas" : 2}},"children": []}
+      ]}
+  ]},
+  {"id": "ph 3","data": {"user": {"name": "one piece","nr_ideas" : 2}},"children": [
+      {"id": "wo 3.1","data": {"user": {"name": "sewing","nr_ideas" : 0}},"children": [
+	{"id": "em 3.1.1","data": {"user": {"name": "length of tie","nr_ideas" : 2}},"children": []}
+      ]},
+      {"id": "wo 3.2","data": {"user": {"name": "drawing","nr_ideas" : 0}},"children": [
+	{"id": "em 3.2.1","data": {"user": {"name": "full tie","nr_ideas" : 2}},"children": []}
+      ]}
+  ]},
+  {"id": "ph 4","data": {"user": {"name": "Stronger material","nr_ideas" : 0}},"children": [
+      {"id": "wo 4.1","data": {"user": {"name": "increase stiffness to avoid bending of tie","nr_ideas" : 0}},"children": [
+	{"id": "em 4.1.1","data": {"user": {"name": "length of tie","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 4.2","data": {"user": {"name": "active, hard components to block machine","nr_ideas" : 0}},"children": [
+	{"id": "em 4.2.1","data": {"user": {"name": "length of tie","nr_ideas" : 1}},"children": []}
+      ]}
+  ]},
+  {"id": "ph 5","data": {"user": {"name": "Field","nr_ideas" : 0}},"children": [
+      {"id": "wo 5.1","data": {"user": {"name": "length of tie","nr_ideas" : 1}},"children": []}
+  ]},
+  {"id": "ph 6","data": {"user": {"name": "no long tie","nr_ideas" : 0}},"children": [
+      {"id": "wo 6.1","data": {"user": {"name": "bow tie","nr_ideas" : 3}},"children": []},
+      {"id": "wo 6.2","data": {"user": {"name": "short tie","nr_ideas" : 2}},"children": []}
+  ]}
+]}

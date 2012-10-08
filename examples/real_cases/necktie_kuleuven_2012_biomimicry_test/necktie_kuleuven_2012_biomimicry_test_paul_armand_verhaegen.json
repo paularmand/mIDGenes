@@ -1,0 +1,59 @@
+{"id": "root","data": {"user": {"nr_ideas" : 0,"name": "safer_necktie_PAVE"}},"children": [
+  {"id": "ph 1","data": {"user": {"name": "detachable under tension","nr_ideas" : 0}},"children": [
+      {"id": "wo 1.1","data": {"user": {"name": "at back of neck","nr_ideas" : 1}},"children": [
+	{"id": "em 1.1.1","data": {"user": {"name": "thread","nr_ideas" : 1}},"children": []},
+	{"id": "em 1.1.2","data": {"user": {"name": "velcro","nr_ideas" : 2}},"children": []},
+	{"id": "em 1.1.3","data": {"user": {"name": "material weakness","nr_ideas" : 1}},"children": []},
+	{"id": "em 1.1.4","data": {"user": {"name": "knot","nr_ideas" : 3}},"children": []}
+      ]},
+      {"id": "wo 1.2","data": {"user": {"name": "at knot","nr_ideas" : 1}},"children": [
+	{"id": "em 1.2.1","data": {"user": {"name": "velcro","nr_ideas" : 3}},"children": []},
+	{"id": "em 1.2.2","data": {"user": {"name": "knot","nr_ideas" : 1}},"children": []},
+	{"id": "em 1.2.3","data": {"user": {"name": "material rips","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 1.3","data": {"user": {"name": "weak material","nr_ideas" : 1}},"children": [
+      ]},
+      {"id": "wo 1.4","data": {"user": {"name": "diadem like","nr_ideas" : 3}},"children": [
+      ]}
+  ]},
+  {"id": "ph 2","data": {"user": {"name": "tie in / on shirt","nr_ideas" : 0}},"children": [
+      {"id": "wo 2.1","data": {"user": {"name": "sewed on shirt","nr_ideas" : 4}},"children": [
+      ]},
+      {"id": "wo 2.2","data": {"user": {"name": "drawn on shirt","nr_ideas" : 2}},"children": [
+      ]},
+      {"id": "wo 2.3","data": {"user": {"name": "velcro tie","nr_ideas" : 1}},"children": [
+      ]}
+  ]},
+  {"id": "ph 3","data": {"user": {"name": "new design tie","nr_ideas" : 0}},"children": [
+      {"id": "wo 3.1","data": {"user": {"name": "short tie","nr_ideas" : 2}},"children": [
+      ]},
+      {"id": "wo 3.2","data": {"user": {"name": "bow tie","nr_ideas" : 3}},"children": [
+      ]}
+  ]},
+  {"id": "ph 4","data": {"user": {"name": "tie stops machine","nr_ideas" : 0}},"children": [
+      {"id": "wo 4.1","data": {"user": {"name": "hard pieces in tie stop machine","nr_ideas" : 1}},"children": [
+      ]}
+  ]},
+  {"id": "ph 5","data": {"user": {"name": "attach tie","nr_ideas" : 0}},"children": [
+      {"id": "wo 5.1","data": {"user": {"name": "clamp / tiepin","nr_ideas" : 0}},"children": [
+	{"id": "em 5.1.1","data": {"user": {"name": "1 clamp","nr_ideas" : 4}},"children": []},
+	{"id": "em 5.1.2","data": {"user": {"name": "multiple clamps","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 5.2","data": {"user": {"name": "velcro","nr_ideas" : 0}},"children": [
+	{"id": "em 5.2.1","data": {"user": {"name": "strip between tie and shirt","nr_ideas" : 4}},"children": []},
+	{"id": "em 5.2.2","data": {"user": {"name": "extra velcro strap","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 5.3","data": {"user": {"name": "knot","nr_ideas" : 0}},"children": [
+	{"id": "em 5.3.1","data": {"user": {"name": "1 extra strap on tie","nr_ideas" : 1}},"children": []},
+	{"id": "em 5.3.2","data": {"user": {"name": "multiple buttons on tie","nr_ideas" : 3}},"children": []}
+      ]},
+      {"id": "wo 5.4","data": {"user": {"name": "wire","nr_ideas" : 0}},"children": [
+	{"id": "em 5.4.1","data": {"user": {"name": "attach tie to buckle with wire","nr_ideas" : 1}},"children": []}
+      ]},
+      {"id": "wo 5.5","data": {"user": {"name": "magnet","nr_ideas" : 0}},"children": [
+	{"id": "em 5.5.1","data": {"user": {"name": "magnet / iron in tie and shirt","nr_ideas" : 3}},"children": []}
+      ]}
+  ]},
+  {"id": "ph 6","data": {"user": {"name": "rigid tie doesn't fall","nr_ideas" : 1}},"children": [
+  ]}
+]}
